@@ -20,7 +20,25 @@
             <form >
                 <div class="form-group">
                    Nome
-                   <input type="text" name="nome" id="nome" class="form-control">
+                   <input type="text" name="nome" id="nome" class="form-control" required="">
+                </div>
+                
+                <div class="form-group">
+                   Endereço
+                   <input type="text" name="endereco" id="endereco" class="form-control" required="">
+                </div>
+                
+                <div class="form-group">
+                   Telefone
+                   <input type="number" name="telefone" id="telefone" class="form-control" required="">
+                </div>
+                
+                <div class="form-group">
+                   E-mail
+                   <input type="text" name="email" id="email" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                    <input type="submit" id="cadastrar" class="btn btn-info" value="Cadastrar">
                 </div>
             </form>
         </div>
