@@ -21,7 +21,7 @@
                 <h1>Tela de cadastro</h1>
 
                 <div>
-                    <form >
+                    <form action="olaMundo" method="post">
                         <div class="form-group">
                            Nome
                            <input type="text" name="nome" id="nome" class="form-control" required="">
