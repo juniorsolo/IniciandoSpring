@@ -12,6 +12,6 @@
         <title>Iniciando com Spring MVC</title>
     </head>
     <body>
-        <h1>Ola ${nome}, obrigado por cadastrar!!!</h1>
+        <h1>${nome} cadastrado com sucesso!!!</h1>
     </body>
 </html>
