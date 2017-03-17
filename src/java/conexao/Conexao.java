@@ -18,7 +18,7 @@ public class Conexao {
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/iniciandospring","root","");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/iniciandospring","junior","junior");
             System.out.println("conectado com sucesso....");
             return conn;
         }catch(ClassNotFoundException ex){
@@ -26,7 +26,7 @@ public class Conexao {
             java.util.logging.Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null,ex);
         }
         catch(SQLException ex){
-            System.out.println(ex);
+            System.out.println("erro ao conectar ao banco: " +ex.getMessage());
             java.util.logging.Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null,ex);
         }
         return null;
