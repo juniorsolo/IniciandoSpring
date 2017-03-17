@@ -1,10 +1,12 @@
 package br.com.iniciando.dominio;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Junior
  */
-public class Cadastro {
+public class Cadastro implements Serializable{
     private String nome;
     private String endereco;
     private Integer telefone;
