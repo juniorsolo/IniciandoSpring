@@ -1,6 +1,7 @@
 package br.com.iniciando.dao;
 
 import br.com.iniciando.dominio.Cadastro;
+import com.google.gson.Gson;
 import conexao.Conexao;
 import java.io.Serializable;
 import java.sql.Connection;
@@ -9,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -49,4 +51,7 @@ public class CadastroDAO implements Serializable{
         }
         return lista;
     }
+    
+   
+    
 }

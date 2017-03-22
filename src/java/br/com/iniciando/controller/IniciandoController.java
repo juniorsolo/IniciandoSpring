@@ -2,6 +2,7 @@ package br.com.iniciando.controller;
 
 import br.com.iniciando.dao.CadastroDAO;
 import br.com.iniciando.dominio.Cadastro;
+import com.google.gson.Gson;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -45,5 +47,19 @@ public class IniciandoController {
             Logger.getLogger(IniciandoController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "lista";
+    }
+    
+    @RequestMapping("/listajson")
+    public @ResponseBody String listaCadastrojson(){
+        
+        CadastroDAO dao = new CadastroDAO();  
+        try {
+            Gson gson = new Gson();
+            String retorno = gson.toJson(dao.listaTodos());
+            return retorno;
+        } catch (SQLException ex) {
+            Logger.getLogger(IniciandoController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return null;
     }
 }
